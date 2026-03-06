@@ -49,7 +49,7 @@ export default function Page() {
           </h1>
 
           {/* THE BIG NAME REVEAL */}
-          <div className="my-10 relative">
+          <div className="my-4 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-purple-500 blur-2xl opacity-20 scale-y-50"></div>
             <h2 className="relative text-3xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-300 to-purple-400 drop-shadow-[0_0_20px_rgba(244,63,94,0.3)]">
               Nikhil Sambhariya
@@ -57,8 +57,11 @@ export default function Page() {
           </div>
 
           <p className="text-lg text-zinc-400 leading-relaxed font-light max-w-2xl mx-auto">
-            While the internet knows the developer, the code, and the projects, behind the screen exists a personal story of a friendship that has stood the ultimate test of time. 
-          </p>
+            Real best friends are rare.  
+Not the ones who appear when life is easy,  
+but the ones who stay when everything changes.  
+Some friendships don’t expire — they’re built for life.
+            </p>
         </div>
       </header>
 
@@ -189,11 +192,11 @@ True brotherhood is remembered, not recorded.
               <div className="p-6 md:p-8 rounded-3xl bg-black border border-white/5 flex flex-col items-center text-center shadow-lg">
                 <GraduationCap className="w-10 h-10 text-amber-400 mb-4" />
                 <span className="text-white font-medium text-lg">Nikhil</span>
-                <span className="text-xs text-zinc-500 mt-2 uppercase tracking-widest font-semibold">Arts Stream</span>
+                <span className="text-xs text-zinc-500 mt-2 uppercase tracking-widest font-semibold">Arts</span>
               </div>
               <div className="p-6 md:p-8 rounded-3xl bg-black border border-white/5 flex flex-col items-center text-center shadow-lg">
                 <Sparkles className="w-10 h-10 text-cyan-400 mb-4" />
-                <span className="text-white font-medium text-lg">Jitendra</span>
+                <span className="text-white font-medium text-lg">Me</span>
                 <span className="text-xs text-zinc-500 mt-2 uppercase tracking-widest font-semibold">Mathematics</span>
               </div>
             </div>
@@ -201,7 +204,7 @@ True brotherhood is remembered, not recorded.
         </section>
 
         {/* ===== THE FINAL TRIBUTE (INSTAGRAM INTEGRATION) ===== */}
-        <section className="text-center pt-20 pb-10">
+        <section className="text-center pt-5 pb-5">
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-rose-500/50 to-transparent mx-auto mb-12"></div>
           
           <p className="text-xl md:text-2xl text-zinc-300 font-light leading-relaxed mb-12">
