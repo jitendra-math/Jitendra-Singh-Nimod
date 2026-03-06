@@ -51,7 +51,7 @@ export default function Page() {
           {/* THE BIG NAME REVEAL */}
           <div className="my-10 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-purple-500 blur-2xl opacity-20 scale-y-50"></div>
-            <h2 className="relative text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-300 to-purple-400 tracking-tighter drop-shadow-[0_0_20px_rgba(244,63,94,0.3)]">
+            <h2 className="relative text-3xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-300 to-purple-400 tracking-tighter drop-shadow-[0_0_20px_rgba(244,63,94,0.3)]">
               Nikhil Sambhariya
             </h2>
           </div>
@@ -198,24 +198,33 @@ export default function Page() {
             While life takes people in different directions, <strong className="text-white font-semibold">true friendships remain constant</strong>. 
           </p>
           
-          {/* THE "LOVE YOU BRUH" BUTTON */}
-          <div className="inline-block relative group">
-            <div className="absolute -inset-2 bg-gradient-to-r from-rose-500 to-purple-500 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
-            <a 
-              href="https://instagram.com/_nikhil0518" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative flex items-center gap-4 px-8 py-5 bg-black border border-rose-500/30 rounded-full hover:bg-zinc-900 transition-all duration-300 transform group-hover:scale-105 shadow-2xl"
-            >
-              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-rose-500 to-purple-500">
-                <Instagram className="w-5 h-5 text-white" />
-              </div>
-              <div className="text-left">
-                <p className="text-rose-400 font-bold text-lg tracking-wide uppercase">Love you bruh ❤️</p>
-                <p className="text-zinc-400 text-sm font-medium tracking-wider">@_nikhil0518</p>
-              </div>
-            </a>
-          </div>
+          {/* FRIEND BUTTON */}
+<div className="flex justify-center">
+  <div className="relative group inline-block">
+
+    {/* glow */}
+    <div className="absolute -inset-2 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 rounded-full blur opacity-40 group-hover:opacity-80 transition duration-500"></div>
+
+    <a
+      href="https://instagram.com/_nikhil_0518"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative flex flex-col items-center justify-center px-8 py-5 bg-black border border-white/10 rounded-full hover:bg-zinc-900 transition-all duration-300 transform group-hover:scale-105 shadow-2xl text-center"
+    >
+
+      {/* main line */}
+      <p className="text-white font-semibold text-lg md:text-xl tracking-wide">
+        Forever Friendship 🤝
+      </p>
+
+      {/* instagram id */}
+      <p className="text-sm md:text-base font-semibold bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 bg-clip-text text-transparent tracking-wider">
+        @_nikhil_0518
+      </p>
+
+    </a>
+  </div>
+</div>
 
         </section>
 
