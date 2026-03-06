@@ -1,9 +1,10 @@
-const BASE_URL = "https://www.jitendrasingh.online";
+// app/sitemap/route.js
+
+const BASE_URL = "https://me.jitubanna.com";
 
 export async function GET() {
-  const now = "2026-02-23"; // static date for trust (change only when real update)
+  const now = "2026-02-23";
 
-  // 🔥 ALL WEBSITE PAGES (MASTER LIST — NO PAGE LEFT)
   const pages = [
 
     // CORE
@@ -61,7 +62,7 @@ export async function GET() {
     "/blog/my-journey-as-developer",
     "/blog/full-stack-developer-rajasthan",
 
-    // IDENTITY CLUSTER (MOST IMPORTANT)
+    // IDENTITY CLUSTER
     "/identity/jitendra-nimod",
     "/identity/jitendra-singh",
     "/identity/jitendra-singh-nimod",
@@ -91,12 +92,12 @@ export async function GET() {
       }
 
       return `
-      <url>
-        <loc>${BASE_URL}${path}</loc>
-        <lastmod>${now}</lastmod>
-        <changefreq>${freq}</changefreq>
-        <priority>${priority}</priority>
-      </url>`;
+  <url>
+    <loc>${BASE_URL}${path}</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>${freq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
     })
     .join("");
 
