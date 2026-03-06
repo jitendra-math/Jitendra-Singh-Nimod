@@ -3,7 +3,7 @@ export async function GET() {
 User-agent: *
 Allow: /
 
-Sitemap: https://jitendrasingh.online/sitemap.xml
+Sitemap: https://me.jitubanna.com/sitemap.xml
   `;
 
   return new Response(text.trim(), {
