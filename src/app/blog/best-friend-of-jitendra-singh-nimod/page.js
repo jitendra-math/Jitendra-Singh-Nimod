@@ -38,7 +38,7 @@ export default function Page() {
         <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[600px] h-[500px] bg-gradient-to-b from-rose-500/20 via-fuchsia-500/10 to-transparent blur-[120px] rounded-full pointer-events-none"></div>
 
         <div className="max-w-3xl mx-auto relative z-10 text-center animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-rose-500/20 bg-rose-500/5 text-rose-300 text-xs font-medium tracking-widest uppercase mb-10 shadow-[0_0_30px_rgba(244,63,94,0.15)]">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-rose-500/20 bg-rose-500/5 text-rose-300 text-xs font-medium uppercase mb-10 shadow-[0_0_30px_rgba(244,63,94,0.15)]">
             <Heart className="w-4 h-4" fill="currentColor" />
             <span>Brotherhood Archive</span>
           </div>
@@ -51,7 +51,7 @@ export default function Page() {
           {/* THE BIG NAME REVEAL */}
           <div className="my-10 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-purple-500 blur-2xl opacity-20 scale-y-50"></div>
-            <h2 className="relative text-3xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-300 to-purple-400 tracking-tighter drop-shadow-[0_0_20px_rgba(244,63,94,0.3)]">
+            <h2 className="relative text-3xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-300 to-purple-400 drop-shadow-[0_0_20px_rgba(244,63,94,0.3)]">
               Nikhil Sambhariya
             </h2>
           </div>
@@ -64,50 +64,60 @@ export default function Page() {
 
       <article className="max-w-3xl mx-auto px-6 space-y-24">
 
-        {/* ===== THE MASTERPIECE VAULT: 0 PHOTOS, INFINITE MEMORIES ===== */}
-        <section className="relative group perspective-1000">
-          <div className="absolute -inset-1.5 bg-gradient-to-r from-rose-500 via-purple-500 to-rose-500 rounded-[3rem] blur-xl opacity-25 group-hover:opacity-40 transition duration-1000 animate-pulse"></div>
-          
-          <div className="relative p-10 md:p-16 rounded-[3rem] bg-gradient-to-b from-zinc-900/90 to-black border border-white/10 shadow-[0_30px_60px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col items-center text-center transform transition-transform duration-700 hover:scale-[1.02]">
-            
-            {/* Glassy Top Highlight */}
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-            
-            <div className="flex items-center justify-center gap-6 md:gap-16 mb-12 relative z-10">
-              
-              {/* 0 Photos */}
-              <div className="flex flex-col items-center">
-                <div className="w-16 h-16 rounded-full bg-white/[0.03] border border-white/10 flex items-center justify-center mb-6 shadow-inner">
-                  <CameraOff className="w-6 h-6 text-zinc-500" />
-                </div>
-                <span className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-600 tracking-tighter">0</span>
-                <span className="text-xs uppercase tracking-[0.3em] text-zinc-500 mt-4 font-semibold">Photos</span>
-              </div>
+        {/* ===== PREMIUM MEMORY VAULT ===== */}
+<section className="relative group">
 
-              {/* Divider */}
-              <div className="w-px h-24 bg-gradient-to-b from-transparent via-rose-500/30 to-transparent"></div>
+  {/* outer glow */}
+  <div className="absolute -inset-1 bg-gradient-to-r from-rose-500 via-purple-500 to-rose-500 blur-2xl opacity-20 group-hover:opacity-40 transition duration-700 rounded-[3rem]"></div>
 
-              {/* Infinite Memories */}
-              <div className="flex flex-col items-center">
-                <div className="w-16 h-16 rounded-full bg-rose-500/10 border border-rose-500/30 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(244,63,94,0.2)]">
-                  <Infinity className="w-8 h-8 text-rose-400" />
-                </div>
-                <span className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-b from-rose-300 to-rose-700 tracking-tighter">∞</span>
-                <span className="text-xs uppercase tracking-[0.3em] text-rose-400 mt-4 font-semibold drop-shadow-md">Memories</span>
-              </div>
+  <div className="relative p-12 md:p-16 rounded-[3rem] bg-gradient-to-b from-zinc-900/90 to-black border border-white/10 backdrop-blur-xl shadow-[0_30px_80px_rgba(0,0,0,0.8)] text-center">
 
-            </div>
+    {/* numbers */}
+    <div className="flex items-center justify-center gap-10 md:gap-20 mb-12">
 
-            {/* Premium Quote */}
-            <div className="relative z-10 max-w-lg mt-4">
-              <Quote className="w-8 h-8 text-rose-500/20 mx-auto mb-4" />
-              <p className="text-xl md:text-2xl text-zinc-200 font-light leading-relaxed italic">
-                "We didn't capture moments in pixels, we etched them into our souls. True brotherhood doesn't need a gallery to prove it exists."
-              </p>
-            </div>
-            
-          </div>
-        </section>
+      {/* photos */}
+      <div className="flex flex-col items-center">
+        <span className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-600">
+          0
+        </span>
+
+        <span className="text-xs md:text-sm uppercase tracking-[0.35em] text-zinc-500 mt-4 font-semibold">
+          Photos
+        </span>
+      </div>
+
+      {/* divider */}
+      <div className="w-px h-20 md:h-28 bg-gradient-to-b from-transparent via-rose-500/40 to-transparent"></div>
+
+      {/* memories */}
+      <div className="flex flex-col items-center">
+        <span className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-b from-rose-300 to-rose-700">
+          ∞
+        </span>
+
+        <span className="text-xs md:text-sm uppercase tracking-[0.35em] text-rose-400 mt-4 font-semibold">
+          Memories
+        </span>
+      </div>
+
+    </div>
+
+    {/* quote */}
+    <div className="max-w-xl mx-auto">
+
+      <div className="text-rose-500/20 text-5xl mb-4">❝</div>
+
+      <p className="text-lg md:text-2xl text-zinc-200 font-light leading-relaxed italic">
+        Some memories were never meant to be stored in cameras.  
+They were meant to live in conversations, laughter, and loyalty.  
+True brotherhood is remembered, not recorded.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
         {/* ===== THE TIMELINE (MOBILE-FIRST SCROLLYTELLING) ===== */}
         <section className="relative">
@@ -218,7 +228,7 @@ export default function Page() {
       </p>
 
       {/* instagram id */}
-      <p className="text-sm md:text-base font-semibold bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 bg-clip-text text-transparent tracking-wider">
+      <p className="text-lg md:text-base font-semibold bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 bg-clip-text text-transparent tracking-wider">
         @_nikhil_0518
       </p>
 
