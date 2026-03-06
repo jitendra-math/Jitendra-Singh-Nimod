@@ -4,232 +4,225 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* =====================================================
-   GLOBAL BASE
+   GLOBAL BASE (APPLE-TIER DARK MODE)
 ===================================================== */
 
-html {
-  scroll-behavior: smooth;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #000000; /* Pure black for infinite depth */
+  }
+
+  body {
+    font-family:
+      "Inter",
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Helvetica,
+      Arial,
+      sans-serif;
+    
+    background-color: #000000;
+    color: #a1a1aa; /* text-zinc-400 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
 }
-
-body {
-  font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    Segoe UI,
-    Roboto,
-    Helvetica,
-    Arial,
-    "Apple Color Emoji",
-    "Segoe UI Emoji";
-
-  background: #0b0b0f;
-  color: #e4e4e7;
-  -webkit-font-smoothing: antialiased;
-}
-
 
 /* =====================================================
-   SELECTION
+   SELECTION (SUBTLE & CLEAN)
 ===================================================== */
 
 ::selection {
-  background: #6366f1;
-  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
+::-moz-selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
 
 /* =====================================================
-   SCROLLBAR (PREMIUM)
+   SCROLLBAR (MINIMALIST MAC STYLE)
 ===================================================== */
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b0b0f;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #6366f1, #9333ea);
-  border-radius: 8px;
+  background: #27272a; /* zinc-800 */
+  border-radius: 10px;
+  border: 2px solid #000000;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46; /* zinc-700 */
+}
 
 /* =====================================================
    LINKS
 ===================================================== */
 
 a {
-  transition: all 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 /* =====================================================
-   CONTAINER
+   CONTAINER & SECTIONS
 ===================================================== */
 
 .container-premium {
-  @apply max-w-7xl mx-auto px-6;
+  @apply max-w-5xl mx-auto px-6;
 }
-
-
-/* =====================================================
-   SECTION SPACING
-===================================================== */
 
 .section {
-  @apply py-20 md:py-28;
+  @apply py-20 md:py-32;
 }
 
-
 /* =====================================================
-   GRADIENT TEXT
+   GRADIENT TEXT (RE-PROGRAMMED TO SILVER/WHITE)
 ===================================================== */
 
 .gradient-text {
-  background: linear-gradient(90deg, #6366f1, #9333ea);
+  background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-
 /* =====================================================
-   GLASS EFFECT
+   GLASS EFFECT (TRUE FROSTED GLASS)
 ===================================================== */
 
 .glass {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
-
 /* =====================================================
-   PREMIUM BUTTON
+   PREMIUM BUTTON (MONOCHROME ELEGANCE)
 ===================================================== */
 
 .btn-premium {
-  @apply px-6 py-3 rounded-xl font-semibold text-white transition duration-300;
-  background: linear-gradient(90deg, #6366f1, #9333ea);
+  @apply px-8 py-3.5 rounded-full font-medium text-black bg-white transition-all duration-300 inline-flex items-center justify-center gap-2;
 }
 
 .btn-premium:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.3);
+  background: #e4e4e7; /* zinc-200 */
+  box-shadow: 0 10px 40px -10px rgba(255, 255, 255, 0.3);
 }
-
 
 /* =====================================================
    CARD
 ===================================================== */
 
 .card-premium {
-  @apply p-6 rounded-2xl border border-white/10 bg-white/5;
+  @apply p-8 rounded-[2rem] border border-white/[0.05] bg-zinc-900/30 backdrop-blur-xl transition-all duration-500;
 }
 
+.card-premium:hover {
+  @apply border-white/[0.1] bg-zinc-900/50;
+  transform: translateY(-4px);
+}
 
 /* =====================================================
-   IMAGE SHADOW
+   IMAGE SHADOW (DEEP & SUBTLE)
 ===================================================== */
 
 .img-shadow {
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
-
 
 /* =====================================================
    SEO TEXT READABILITY
 ===================================================== */
 
 .seo-text {
-  @apply max-w-3xl leading-relaxed text-zinc-300;
+  @apply max-w-3xl leading-relaxed text-zinc-400 font-light text-lg;
 }
 
-
 /* =====================================================
-   GLOW EFFECT
+   GLOW EFFECT (NEUTRAL TONES)
 ===================================================== */
 
 .glow {
   box-shadow:
-    0 0 40px rgba(99, 102, 241, 0.25),
-    0 0 80px rgba(147, 51, 234, 0.2);
+    0 0 40px rgba(255, 255, 255, 0.05),
+    0 0 80px rgba(255, 255, 255, 0.02);
 }
 
-
 /* =====================================================
-   FADE ANIMATION
+   ANIMATIONS (SMOOTH & REFINED)
 ===================================================== */
 
 .fade-in {
-  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+  animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-
-/* =====================================================
-   FLOAT ANIMATION
-===================================================== */
-
 .float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-12px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
 }
 
-
 /* =====================================================
-   HERO BLOB BACKGROUND
+   HERO BLOB BACKGROUNDS (CONVERTED TO SUBTLE AURA)
+   Kept the class names same so old pages don't break, 
+   but changed the output to premium white/zinc glows!
 ===================================================== */
 
 .blob-purple {
   position: absolute;
   width: 600px;
   height: 600px;
-  background: #7c3aed;
-  filter: blur(180px);
-  opacity: 0.35;
+  background: rgba(255, 255, 255, 0.03); /* Was purple, now subtle white */
+  filter: blur(120px);
   border-radius: 50%;
+  pointer-events: none;
 }
 
 .blob-blue {
   position: absolute;
   width: 600px;
   height: 600px;
-  background: #2563eb;
-  filter: blur(180px);
-  opacity: 0.35;
+  background: rgba(161, 161, 170, 0.05); /* Was blue, now subtle zinc */
+  filter: blur(150px);
   border-radius: 50%;
+  pointer-events: none;
 }
-
 
 /* =====================================================
    PREMIUM DIVIDER
@@ -237,32 +230,34 @@ a {
 
 .divider-gradient {
   height: 1px;
+  width: 100%;
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255,255,255,0.2),
+    rgba(255, 255, 255, 0.1),
     transparent
   );
 }
 
-
 /* =====================================================
-   HOVER LINK UNDERLINE
+   HOVER LINK UNDERLINE (CENTER OUT EXPANSION)
 ===================================================== */
 
 .link-underline {
   position: relative;
+  text-decoration: none;
 }
 
 .link-underline::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: -4px;
   width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg,#6366f1,#9333ea);
-  transition: width .25s ease;
+  height: 1px;
+  background: #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
 }
 
 .link-underline:hover::after {
