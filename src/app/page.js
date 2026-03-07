@@ -34,7 +34,8 @@ import {
   ChevronRight,
   Menu,
   X,
-  ChevronUp
+  ChevronUp,
+  Mail
 } from "lucide-react";
 
 export const metadata = {
