@@ -1,20 +1,28 @@
+// src/app/security.txt/route.js
+
 export async function GET() {
   const text = `
-Contact: https://jitendrasingh.online/contact
+Contact: https://me.jitubanna.com/contact
 Preferred-Languages: en
-Canonical: https://jitendrasingh.online/security.txt
-Policy: https://jitendrasingh.online
+Canonical: https://me.jitubanna.com/security.txt
+Policy: https://jitubanna.com
 
 # Owner
 Name: Jitendra Singh Nimod
-Website: https://jitendrasingh.online
+Website: https://me.jitubanna.com
+Main Domain: https://jitubanna.com
+Legacy Domain: https://jitendrasingh.online
 Brand: JSS Originals
 Location: Rajasthan, India
+
+# Expiry
+Expires: 2027-01-01T00:00:00.000Z
   `;
 
   return new Response(text.trim(), {
     headers: {
       "Content-Type": "text/plain",
+      "Cache-Control": "no-store",
     },
   });
 }
