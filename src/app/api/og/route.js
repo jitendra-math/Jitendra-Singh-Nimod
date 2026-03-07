@@ -1,3 +1,5 @@
+// src/app/api/og/route.js
+
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
@@ -12,25 +14,55 @@ export async function GET() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "60px",
-          background: "linear-gradient(135deg,#0f172a,#1e293b,#020617)",
+          padding: "80px",
+          background: "linear-gradient(135deg,#020617,#0f172a,#020617)",
           color: "white",
+          fontFamily: "sans-serif",
         }}
       >
-        <div style={{ fontSize: 60, fontWeight: 700 }}>
+        {/* Name */}
+        <div
+          style={{
+            fontSize: 64,
+            fontWeight: 800,
+            letterSpacing: "-1px",
+          }}
+        >
           Jitendra Singh Nimod
         </div>
 
-        <div style={{ fontSize: 28, marginTop: 20, color: "#60a5fa" }}>
+        {/* Role */}
+        <div
+          style={{
+            fontSize: 30,
+            marginTop: 20,
+            color: "#60a5fa",
+            fontWeight: 500,
+          }}
+        >
           Full Stack Developer • B.Sc Mathematics Student
         </div>
 
-        <div style={{ fontSize: 22, marginTop: 30, opacity: 0.8 }}>
-          Official Website
+        {/* Tagline */}
+        <div
+          style={{
+            fontSize: 24,
+            marginTop: 40,
+            opacity: 0.85,
+          }}
+        >
+          Personal Website & Digital Identity
         </div>
 
-        <div style={{ marginTop: 40, fontSize: 18, opacity: 0.7 }}>
-          jitendrasingh.online
+        {/* Brand */}
+        <div
+          style={{
+            marginTop: 40,
+            fontSize: 20,
+            opacity: 0.7,
+          }}
+        >
+          me.jitubanna.com
         </div>
       </div>
     ),
