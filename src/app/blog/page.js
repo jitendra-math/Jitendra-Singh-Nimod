@@ -29,6 +29,8 @@ import {
   Globe,
   Filter,
   Search,
+  Instagram,
+  Mail,
 } from "lucide-react";
 
 export const metadata = {
