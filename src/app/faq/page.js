@@ -165,11 +165,6 @@ const faqCategories = [
   },
 ];
 
-// Helper component for accordion (client component)
-// Note: Since this page is a server component, we need a separate client component for the accordion.
-// We'll create a simple FAQAccordion component inside this file with "use client".
-// But to keep it clean, we'll define a client component in the same file.
-
 export default function FAQPage() {
   // FAQ Schema (JSON-LD)
   const faqSchema = {
@@ -305,7 +300,7 @@ export default function FAQPage() {
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+// ChevronDown is already imported at the top, no need to import again
 
 function FAQAccordion({ categories }) {
   const [openIndex, setOpenIndex] = useState(null); // format: "categoryIndex-questionIndex"
