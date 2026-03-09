@@ -25,25 +25,30 @@ export default function Header() {
       <div
         className={`w-full max-w-7xl transition-all duration-500
         ${scrolled
-          ? "bg-black/60 backdrop-blur-2xl border border-white/10 shadow-xl"
+          ? "bg-white/70 backdrop-blur-xl border border-zinc-200 shadow-lg"
           : "bg-transparent border-transparent"}
         rounded-b-[18px]`}
       >
 
-        <div className="px-4 h-16 flex items-center justify-between">
+        <div className="px-6 h-16 flex items-center justify-between">
 
           {/* LOGO */}
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-black tracking-tight text-[#2563EB]">
-              Jitu
-              <span className="text-[#7C3AED]">
+            <span className="text-2xl font-black">
+
+              <span className="text-blue-600">
+                Jitu
+              </span>
+
+              <span className="text-violet-600">
                 Banna
               </span>
+
             </span>
           </Link>
 
           {/* NAV */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-7">
 
             {[
               { name: "Home", path: "/" },
@@ -55,7 +60,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.path}
-                className="text-sm font-medium text-zinc-400 hover:text-white transition-colors"
+                className="text-sm font-medium text-zinc-600 hover:text-black transition"
               >
                 {item.name}
               </Link>
@@ -70,7 +75,7 @@ export default function Header() {
               href="https://github.com/jitendra-math"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition"
+              className="p-2 rounded-lg text-zinc-600 hover:text-black hover:bg-zinc-100 transition"
             >
               <Github className="w-5 h-5" />
             </a>
@@ -79,7 +84,7 @@ export default function Header() {
               href="https://instagram.com/jitendra.07_7"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition"
+              className="p-2 rounded-lg text-zinc-600 hover:text-pink-600 hover:bg-pink-50 transition"
             >
               <Instagram className="w-5 h-5" />
             </a>
@@ -88,7 +93,7 @@ export default function Header() {
               href="https://jitubanna.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg text-indigo-400 hover:text-indigo-300 hover:bg-indigo-500/10 transition"
+              className="p-2 rounded-lg text-violet-600 hover:text-violet-700 hover:bg-violet-50 transition"
             >
               <Globe className="w-5 h-5" />
             </a>
