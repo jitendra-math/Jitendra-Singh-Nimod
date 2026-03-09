@@ -77,18 +77,17 @@ export default function BestFriendPage() {
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-800 mb-4 leading-tight">
           Who Is the Best Friend of{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-rose-500">
+          <span className="text-[#2563EB]">
             Jitendra Singh Nimod?
           </span>
         </h1>
 
         <div className="relative my-8">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#2563EB]/10 via-rose-500/10 to-purple-500/10 blur-3xl rounded-full"></div>
-          <h2 className="relative text-4xl sm:text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] via-rose-500 to-purple-600 drop-shadow-lg">
-            Nikhil Sambhariya
-          </h2>
-        </div>
-
+  <h2 className="text-4xl sm:text-5xl md:text-7xl font-normal text-[#2563EB]">
+    Nikhil Sambhariya
+  </h2>
+</div>
+            
         <p className="text-base sm:text-lg text-zinc-600 max-w-2xl mx-auto leading-relaxed font-light">
           Real best friends are rare. Not the ones who appear when life is easy, 
           but the ones who stay when everything changes. Some friendships don't expire — 
@@ -106,36 +105,42 @@ export default function BestFriendPage() {
           <div className="relative bg-white/90 backdrop-blur-xl border border-white/80 rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 shadow-2xl text-center">
             
             {/* Stats Grid */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 mb-12">
-              
-              {/* Photos Count */}
-              <div className="flex flex-col items-center">
-                <div className="p-4 bg-rose-100 rounded-2xl mb-4">
-                  <Camera className="w-8 h-8 text-rose-500" />
-                </div>
-                <span className="text-5xl md:text-7xl font-black text-zinc-800">0</span>
-                <span className="text-xs uppercase tracking-[0.3em] text-zinc-500 mt-3 font-semibold">
-                  Photos
-                </span>
-                <p className="text-xs text-zinc-400 mt-2">(Not needed)</p>
-              </div>
-              
-              {/* Vertical Divider */}
-              <div className="w-px h-24 bg-gradient-to-b from-transparent via-rose-300 to-transparent hidden sm:block"></div>
-              <div className="h-px w-24 bg-gradient-to-r from-transparent via-rose-300 to-transparent sm:hidden"></div>
-              
-              {/* Memories */}
-              <div className="flex flex-col items-center">
-                <div className="p-4 bg-[#2563EB]/10 rounded-2xl mb-4">
-                  <Infinity className="w-8 h-8 text-[#2563EB]" />
-                </div>
-                <span className="text-5xl md:text-7xl font-black text-[#2563EB]">∞</span>
-                <span className="text-xs uppercase tracking-[0.3em] text-zinc-500 mt-3 font-semibold">
-                  Memories
-                </span>
-                <p className="text-xs text-zinc-400 mt-2">Forever</p>
-              </div>
-            </div>
+<div className="flex items-center justify-center gap-10 sm:gap-16 mb-10">
+
+  {/* Photos Count */}
+  <div className="flex flex-col items-center">
+    <div className="p-2.5 bg-rose-100 rounded-xl mb-2">
+      <Camera className="w-5 h-5 text-rose-500" />
+    </div>
+
+    <span className="text-3xl md:text-4xl font-semibold text-zinc-800">0</span>
+
+    <span className="text-[10px] uppercase tracking-[0.25em] text-zinc-500 mt-1">
+      Photos
+    </span>
+
+    <p className="text-[10px] text-zinc-400">(Not needed)</p>
+  </div>
+
+  {/* Divider */}
+  <div className="w-px h-12 bg-gradient-to-b from-transparent via-zinc-300 to-transparent"></div>
+
+  {/* Memories */}
+  <div className="flex flex-col items-center">
+    <div className="p-2.5 bg-[#2563EB]/10 rounded-xl mb-2">
+      <Infinity className="w-5 h-5 text-[#2563EB]" />
+    </div>
+
+    <span className="text-3xl md:text-4xl font-semibold text-[#2563EB]">∞</span>
+
+    <span className="text-[10px] uppercase tracking-[0.25em] text-zinc-500 mt-1">
+      Memories
+    </span>
+
+    <p className="text-[10px] text-zinc-400">Forever</p>
+  </div>
+
+</div>
 
             {/* Quote */}
             <div className="max-w-2xl mx-auto relative">
