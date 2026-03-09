@@ -5,7 +5,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 export default function FAQAccordion({ categories }) {
-  const [openIndex, setOpenIndex] = useState(null); // format: "categoryIndex-questionIndex"
+  const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (catIdx, qIdx) => {
     const key = `${catIdx}-${qIdx}`;
@@ -18,7 +18,8 @@ export default function FAQAccordion({ categories }) {
         <div key={catIdx} className="bg-white/80 backdrop-blur-sm border border-zinc-200 rounded-3xl p-6 md:p-8 shadow-xl">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-2 bg-[#2563EB]/10 rounded-lg">
-              <category.icon className="w-5 h-5 text-[#2563EB]" />
+              {/* ✅ Directly render category.icon as component – no need to pass as prop */}
+              {category.icon && <category.icon className="w-5 h-5 text-[#2563EB]" />}
             </div>
             <h2 className="text-2xl font-bold text-zinc-800">{category.category}</h2>
           </div>
