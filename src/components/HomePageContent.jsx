@@ -152,7 +152,11 @@ export default function HomePageContent() {
             </div>
             <p className="text-sm sm:text-base text-zinc-300">
               <span className="text-zinc-400 font-medium">This Website made for Identity Archive only</span> –{" "}
-              <strong>Jitendra Singh Nimod</strong>The official website not completely build yet.<br> work in progress...<br> Main Website will be soon
+              <strong>Jitendra Singh Nimod</strong>.  
+  The official website is still under development.
+  <br />Work in progress...
+  <br />The full version will be launching soon.
+
             </p>
           </div>
           <a
