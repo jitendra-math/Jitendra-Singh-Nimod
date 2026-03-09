@@ -252,7 +252,7 @@ export default function Footer() {
           </div>
           
           <p className="text-xs text-zinc-400">
-            Built with <Heart className="w-3 h-3 inline text-red-400" /> in Rajasthan
+            Built with <Heart className="w-3 h-3 inline text-red-400" /> by Jitendra Singh
           </p>
         </div>
 
