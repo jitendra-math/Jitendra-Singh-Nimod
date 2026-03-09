@@ -1,3 +1,5 @@
+// src/app/page.js
+
 import Image from "next/image";
 import Link from "next/link";
 import HomePageContent from "../components/HomePageContent";
@@ -42,12 +44,12 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <main className="bg-black text-zinc-100 min-h-screen font-sans selection:bg-white/20 relative overflow-hidden">
+    <main className="bg-gradient-to-br from-white via-zinc-50 to-zinc-100 text-zinc-800 min-h-screen font-sans selection:bg-blue-600/30 selection:text-white relative overflow-hidden">
       <StructuredData />
 
-      {/* Background glows */}
-      <div className="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-zinc-800/30 blur-[120px] rounded-full pointer-events-none"></div>
-      <div className="fixed bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-zinc-900/40 blur-[150px] rounded-full pointer-events-none"></div>
+      {/* Background glows - light theme ke hisaab se soft */}
+      <div className="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="fixed bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-indigo-500/5 blur-[150px] rounded-full pointer-events-none"></div>
 
       <HomePageContent />
     </main>
