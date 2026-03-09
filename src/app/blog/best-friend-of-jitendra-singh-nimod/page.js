@@ -1,7 +1,7 @@
 // src/app/blog/best-friend-of-jitendra-singh-nimod/page.js
+// Fixed version with proper JSX structure
 
 import Link from "next/link";
-import Image from "next/image";
 import {
   Infinity,
   Heart,
@@ -13,12 +13,9 @@ import {
   Compass,
   Instagram,
   Quote,
-  Star,
   Camera,
-  Phone,
   MessageCircle,
   Coffee,
-  BookOpen,
   Award,
   Users,
   ChevronLeft
@@ -83,10 +80,10 @@ export default function BestFriendPage() {
         </h1>
 
         <div className="relative my-8">
-  <h2 className="text-4xl sm:text-5xl md:text-7xl font-normal text-rose-500">
-    Nikhil Sambhariya
-  </h2>
-</div>
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-normal text-rose-500">
+            Nikhil Sambhariya
+          </h2>
+        </div>
             
         <p className="text-base sm:text-lg text-zinc-600 max-w-2xl mx-auto leading-relaxed font-light">
           Real best friends are rare. Not the ones who appear when life is easy, 
@@ -105,42 +102,35 @@ export default function BestFriendPage() {
           <div className="relative bg-white/90 backdrop-blur-xl border border-white/80 rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 shadow-2xl text-center">
             
             {/* Stats Grid */}
-<div className="flex items-center justify-center gap-10 sm:gap-16 mb-10">
+            <div className="flex items-center justify-center gap-10 sm:gap-16 mb-10">
 
-  {/* Photos Count */}
-  <div className="flex flex-col items-center">
-    <div className="p-2.5 bg-rose-100 rounded-xl mb-2">
-      <Camera className="w-5 h-5 text-rose-500" />
-    </div>
+              {/* Photos Count */}
+              <div className="flex flex-col items-center">
+                <div className="p-2.5 bg-rose-100 rounded-xl mb-2">
+                  <Camera className="w-5 h-5 text-rose-500" />
+                </div>
+                <span className="text-3xl md:text-4xl font-semibold text-zinc-800">0</span>
+                <span className="text-[10px] uppercase tracking-[0.25em] text-zinc-500 mt-1">
+                  Photos
+                </span>
+                <p className="text-[10px] text-zinc-400">(Not needed)</p>
+              </div>
 
-    <span className="text-3xl md:text-4xl font-semibold text-zinc-800">0</span>
+              {/* Divider */}
+              <div className="w-px h-12 bg-gradient-to-b from-transparent via-zinc-300 to-transparent"></div>
 
-    <span className="text-[10px] uppercase tracking-[0.25em] text-zinc-500 mt-1">
-      Photos
-    </span>
-
-    <p className="text-[10px] text-zinc-400">(Not needed)</p>
-  </div>
-
-  {/* Divider */}
-  <div className="w-px h-12 bg-gradient-to-b from-transparent via-zinc-300 to-transparent"></div>
-
-  {/* Memories */}
-  <div className="flex flex-col items-center">
-    <div className="p-2.5 bg-[#2563EB]/10 rounded-xl mb-2">
-      <Infinity className="w-5 h-5 text-[#2563EB]" />
-    </div>
-
-    <span className="text-3xl md:text-4xl font-semibold text-[#2563EB]">∞</span>
-
-    <span className="text-[10px] uppercase tracking-[0.25em] text-zinc-500 mt-1">
-      Memories
-    </span>
-
-    <p className="text-[10px] text-zinc-400">Forever</p>
-  </div>
-
-</div>
+              {/* Memories */}
+              <div className="flex flex-col items-center">
+                <div className="p-2.5 bg-[#2563EB]/10 rounded-xl mb-2">
+                  <Infinity className="w-5 h-5 text-[#2563EB]" />
+                </div>
+                <span className="text-3xl md:text-4xl font-semibold text-[#2563EB]">∞</span>
+                <span className="text-[10px] uppercase tracking-[0.25em] text-zinc-500 mt-1">
+                  Memories
+                </span>
+                <p className="text-[10px] text-zinc-400">Forever</p>
+              </div>
+            </div>
 
             {/* Quote */}
             <div className="max-w-2xl mx-auto relative">
@@ -178,6 +168,7 @@ export default function BestFriendPage() {
                     routines, and the simple joys of village school life created a foundation 
                     stronger than concrete.
                   </p>
+                </div>
               </div>
               <div className="md:w-1/2 hidden md:block"></div>
             </div>
@@ -245,42 +236,33 @@ export default function BestFriendPage() {
             </p>
 
             <div className="grid grid-cols-2 gap-4 max-w-xl mx-auto">
+              {/* Nikhil */}
+              <div className="p-4 rounded-xl bg-rose-50 border border-rose-200 flex flex-col items-center text-center shadow-sm">
+                <div className="p-2 bg-rose-100 rounded-lg mb-2">
+                  <GraduationCap className="w-5 h-5 text-rose-500" />
+                </div>
+                <span className="text-sm font-semibold text-zinc-800">
+                  Nikhil
+                </span>
+                <span className="text-xs text-rose-500 mt-1">
+                  Arts & Humanities
+                </span>
+              </div>
 
-  {/* Nikhil */}
-  <div className="p-4 rounded-xl bg-rose-50 border border-rose-200 flex flex-col items-center text-center shadow-sm">
-    
-    <div className="p-2 bg-rose-100 rounded-lg mb-2">
-      <GraduationCap className="w-5 h-5 text-rose-500" />
-    </div>
-
-    <span className="text-sm font-semibold text-zinc-800">
-      Nikhil
-    </span>
-
-    <span className="text-xs text-rose-500 mt-1">
-      Arts & Humanities
-    </span>
-
-  </div>
-
-  {/* Jitendra */}
-  <div className="p-4 rounded-xl bg-blue-50 border border-blue-200 flex flex-col items-center text-center shadow-sm">
-    
-    <div className="p-2 bg-blue-100 rounded-lg mb-2">
-      <Sparkles className="w-5 h-5 text-blue-600" />
-    </div>
-
-    <span className="text-sm font-semibold text-zinc-800">
-      Jitendra
-    </span>
-
-    <span className="text-xs text-blue-600 mt-1">
-      Mathematics (PCM)
-    </span>
-
-  </div>
-
-</div>
+              {/* Jitendra */}
+              <div className="p-4 rounded-xl bg-blue-50 border border-blue-200 flex flex-col items-center text-center shadow-sm">
+                <div className="p-2 bg-blue-100 rounded-lg mb-2">
+                  <Sparkles className="w-5 h-5 text-blue-600" />
+                </div>
+                <span className="text-sm font-semibold text-zinc-800">
+                  Jitendra
+                </span>
+                <span className="text-xs text-blue-600 mt-1">
+                  Mathematics (PCM)
+                </span>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* ===== TRIBUTE SECTION ===== */}
@@ -316,18 +298,21 @@ export default function BestFriendPage() {
         </section>
 
         {/* ===== FRIENDSHIP QUALITIES ===== */}
-        <section className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
+        <section className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { icon: Heart, label: "Trust", color: "rose" },
             { icon: MessageCircle, label: "Conversations", color: "blue" },
             { icon: Coffee, label: "Memories", color: "amber" },
             { icon: Award, label: "Loyalty", color: "purple" },
-          ].map((item, i) => (
-            <div key={i} className="bg-white/70 backdrop-blur-sm p-4 rounded-xl border border-zinc-200 text-center group hover:border-[#2563EB]/30 hover:shadow-md transition-all">
-              <item.icon className={`w-6 h-6 mx-auto mb-2 text-${item.color}-500 group-hover:scale-110 transition-transform`} />
-              <span className="text-xs font-medium text-zinc-600">{item.label}</span>
-            </div>
-          ))}
+          ].map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <div key={i} className="bg-white/70 backdrop-blur-sm p-4 rounded-xl border border-zinc-200 text-center group hover:border-[#2563EB]/30 hover:shadow-md transition-all">
+                <Icon className={`w-6 h-6 mx-auto mb-2 text-${item.color}-500 group-hover:scale-110 transition-transform`} />
+                <span className="text-xs font-medium text-zinc-600">{item.label}</span>
+              </div>
+            );
+          })}
         </section>
 
         {/* ===== CLOSING NOTE ===== */}
