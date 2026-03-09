@@ -1,22 +1,43 @@
 // src/components/Header.jsx
 
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Github, Instagram, Globe } from "lucide-react";
 
 export default function Header() {
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 inset-x-0 z-50">
+    <header className="fixed top-0 inset-x-0 z-50 flex justify-center">
 
-      <div className="w-full bg-black/60 backdrop-blur-xl border-b border-white/10">
+      <div
+        className={`w-full max-w-7xl transition-all duration-500
+        ${scrolled
+          ? "bg-black/60 backdrop-blur-2xl border border-white/10 shadow-xl"
+          : "bg-transparent border-transparent"}
+        rounded-b-[18px]`}
+      >
 
-        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="px-4 h-16 flex items-center justify-between">
 
           {/* LOGO */}
           <Link href="/" className="flex items-center gap-2">
             <span className="text-xl font-black tracking-tight text-white">
-              J
+              Jitu
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
-                S
+                Banna
               </span>
             </span>
           </Link>
