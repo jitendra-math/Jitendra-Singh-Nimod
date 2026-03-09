@@ -178,7 +178,6 @@ export default function BestFriendPage() {
                     routines, and the simple joys of village school life created a foundation 
                     stronger than concrete.
                   </p>
-                </div>
               </div>
               <div className="md:w-1/2 hidden md:block"></div>
             </div>
