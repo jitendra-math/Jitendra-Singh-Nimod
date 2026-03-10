@@ -37,7 +37,9 @@ import {
   Shield,
   TrendingUp,
   Compass,
-  Layers
+  Layers,
+  User,
+  HelpCircle
 } from "lucide-react";
 
 export const metadata = {
@@ -183,12 +185,12 @@ export default function JitubannaPage() {
             </h1>
 
             <p className="text-lg md:text-xl text-[#2563EB] font-medium mb-2">
-              The official digital identity of {identity.name}
+              The official digital identity of Jitendra Singh Nimod
             </p>
 
             <p className="text-base text-zinc-600 max-w-2xl mx-auto md:mx-0 leading-relaxed mb-6">
               <strong className="text-[#2563EB]">Jitubanna</strong> is the flagship domain and primary online identity 
-              of <strong>{identity.name}</strong> (JS Nimod), a Full Stack Web Developer from Rajasthan, India. 
+              of <strong>Jitendra Singh Nimod</strong> (JS Nimod), a Full Stack Web Developer from Rajasthan, India. 
               This domain serves as the central hub for all projects, portfolio, and digital presence.
             </p>
 
