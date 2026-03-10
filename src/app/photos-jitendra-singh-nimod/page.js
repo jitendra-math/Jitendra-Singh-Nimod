@@ -1,6 +1,4 @@
 // src/app/photos-jitendra-singh-nimod/page.js
-// Ultra-premium photo gallery page with lightbox
-
 import Image from "next/image";
 import Link from "next/link";
 import StructuredData from "../../components/StructuredData";
