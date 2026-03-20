@@ -1,4 +1,4 @@
-// app/layout.js – Ultra‑premium SEO + Structured Data
+// app/layout.js – Ultra-premium SEO + Structured Data
 
 import "../styles/globals.css";
 import Header from "../components/Header";
@@ -101,19 +101,12 @@ export const metadata = {
 
   alternates: {
     canonical: "https://me.jitubanna.com",
-    // If you have multiple language versions, add hreflang here
   },
-
-  // Verification for Google Search Console (replace with your own code)
-  // verification: {
-  //   google: "your-google-verification-code",
-  // },
 
   category: "technology",
 
-  // Additional useful meta
   other: {
-    "theme-color": "#2563EB", // your favourite blue
+    "theme-color": "#2563EB",
     "color-scheme": "light dark",
     "apple-mobile-web-app-title": "Jitendra Nimod",
     "application-name": "Jitendra Nimod Identity",
@@ -121,13 +114,18 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  // Person Schema (enhanced)
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
     "@id": "https://me.jitubanna.com/#person",
     name: "Jitendra Singh Nimod",
-    alternateName: ["JS Nimod", "Jitu Nimod", "Jitendra Nimod", "Jitubanna", "Jitu Banna"],
+    alternateName: [
+      "JS Nimod",
+      "Jitu Nimod",
+      "Jitendra Nimod",
+      "Jitubanna",
+      "Jitu Banna",
+    ],
     url: "https://jitubanna.com",
     image: "https://me.jitubanna.com/images/main/jitendra-singh-nimod.jpg",
     jobTitle: "Full Stack Web Developer",
@@ -184,10 +182,9 @@ export default function RootLayout({ children }) {
       "@type": "Country",
       name: "India",
     },
-    birthDate: "2009-05-14", // Optional – you can remove if privacy concern
+    birthDate: "2009-05-14",
   };
 
-  // Organization Schema (enhanced)
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -199,21 +196,22 @@ export default function RootLayout({ children }) {
       "@type": "Person",
       name: "Jitendra Singh Nimod",
     },
-    description: "Digital development brand by Jitendra Singh Nimod, creating modern web applications and digital identity platforms.",
+    description:
+      "Digital development brand by Jitendra Singh Nimod, creating modern web applications and digital identity platforms.",
     sameAs: [
       "https://github.com/jitendra-math",
       "https://www.instagram.com/jitendra.07_7",
     ],
   };
 
-  // Website Schema
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://me.jitubanna.com/#website",
     url: "https://me.jitubanna.com",
     name: "Jitendra Singh Nimod Identity Archive",
-    description: "Official identity archive of Jitendra Singh Nimod, Full Stack Developer from Rajasthan.",
+    description:
+      "Official identity archive of Jitendra Singh Nimod, Full Stack Developer from Rajasthan.",
     publisher: {
       "@type": "Person",
       name: "Jitendra Singh Nimod",
@@ -228,7 +226,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* JSON-LD structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -242,17 +239,24 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
 
-        {/* Preconnect to important origins */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Adsterra / Popunder */}
+        <script
+          async
+          src="https://pl28945867.profitablecpmratenetwork.com/98/21/b6/9821b6d61ed08dcbe09221148783d85a.js"
+        ></script>
 
-        {/* DNS prefetch for external platforms */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+
         <link rel="dns-prefetch" href="https://github.com" />
         <link rel="dns-prefetch" href="https://medium.com" />
       </head>
 
       <body className="bg-gradient-to-br from-white via-zinc-50 to-white text-zinc-800 antialiased selection:bg-[#2563EB]/30 selection:text-white">
-        {/* Premium background blobs – updated to light theme */}
         <div className="fixed top-[-200px] left-[-200px] w-[600px] h-[600px] bg-[#2563EB]/5 blur-[160px] rounded-full pointer-events-none"></div>
         <div className="fixed bottom-[-200px] right-[-200px] w-[600px] h-[600px] bg-purple-500/5 blur-[160px] rounded-full pointer-events-none"></div>
         <div className="fixed inset-0 bg-[radial-gradient(#2563EB_0.5px,transparent_0.5px)] [background-size:24px_24px] opacity-[0.015] pointer-events-none"></div>
