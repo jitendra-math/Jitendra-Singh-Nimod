@@ -239,11 +239,6 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
 
-        {/* Adsterra / Popunder */}
-        <script
-          async
-          src="https://pl28945867.profitablecpmratenetwork.com/98/21/b6/9821b6d61ed08dcbe09221148783d85a.js"
-        ></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
