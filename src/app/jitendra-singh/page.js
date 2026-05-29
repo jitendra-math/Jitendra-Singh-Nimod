@@ -95,7 +95,7 @@ export default function JitendraSinghPage() {
           <span>Entity Disambiguation Record</span>
         </div>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#1E1E1E] mb-5 leading-tight tracking-tight">
-          Jitendra Singh
+     
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#035352] to-[#C9A84C] text-2xl md:text-3xl lg:text-4xl mt-1">
             The Developer Entity
           </span>
