@@ -1,5 +1,4 @@
-// src/app/jitendra-singh/page.js
-// Ultra-premium light theme – reduced font sizes, modern blue/purple palette + glass masking
+"use client";
 
 import Link from "next/link";
 import {
