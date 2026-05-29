@@ -1,22 +1,16 @@
 // src/app/jitendra-singh/page.js
-// Ultra-premium light theme – Vibrant Aurora (Violet/Rose/Cyan)
-// Mobile-first architecture, glassmorphism, small typography, colorful aesthetic.
+// Final polished – centered, no social links, emerald/amber theme
 
 import Link from "next/link";
 import {
   User,
-  ShieldCheck,
-  TerminalSquare,
-  Cpu,
-  Layers,
-  Network,
-  Fingerprint,
-  Github,
-  Linkedin,
-  Mail,
-  Instagram,
-  ChevronRight,
-  Sparkles
+  ShieldAlert,
+  Terminal,
+  BrainCircuit,
+  Code2,
+  GitBranch,
+  Search,
+  Sparkles,
 } from "lucide-react";
 
 export const metadata = {
@@ -61,123 +55,155 @@ export default function JitendraSinghPage() {
   };
 
   return (
-    <main className="relative min-h-screen bg-[#FAFAFA] selection:bg-violet-200 selection:text-violet-900 overflow-x-hidden font-sans">
-      {/* JSON-LD */}
+    <main className="relative min-h-screen bg-neutral-50 overflow-x-hidden">
+      {/* JSON-LD for Google */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* VIBRANT AMBIENT BACKGROUNDS (Apple Siri/Aurora Style) */}
-      <div className="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] min-w-[400px] bg-violet-400/30 blur-[120px] rounded-full mix-blend-multiply pointer-events-none" />
-      <div className="fixed top-[20%] right-[-10%] w-[40vw] h-[40vw] min-w-[300px] bg-rose-400/20 blur-[100px] rounded-full mix-blend-multiply pointer-events-none" />
-      <div className="fixed bottom-[-10%] left-[20%] w-[60vw] h-[60vw] min-w-[500px] bg-cyan-400/20 blur-[130px] rounded-full mix-blend-multiply pointer-events-none" />
-      <div className="fixed inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.025] mix-blend-overlay pointer-events-none" />
+      {/* Masked background blobs */}
+      <div
+        className="fixed top-[-10%] left-[-10%] w-[600px] h-[600px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none"
+        style={{
+          maskImage: "radial-gradient(circle at 30% 40%, black 30%, transparent 80%)",
+          WebkitMaskImage: "radial-gradient(circle at 30% 40%, black 30%, transparent 80%)",
+        }}
+      />
+      <div
+        className="fixed bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-amber-500/10 blur-[150px] rounded-full pointer-events-none"
+        style={{
+          maskImage: "radial-gradient(circle at 70% 60%, black 30%, transparent 80%)",
+          WebkitMaskImage: "radial-gradient(circle at 70% 60%, black 30%, transparent 80%)",
+        }}
+      />
+      <div className="fixed inset-0 bg-[radial-gradient(#10b981_0.6px,transparent_0.6px)] [background-size:24px_24px] opacity-[0.015] pointer-events-none" />
 
-      {/* HERO SECTION */}
-      <header className="relative z-10 max-w-3xl mx-auto px-5 pt-24 pb-10 flex flex-col items-center text-center">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 mb-6 bg-white/50 backdrop-blur-xl border border-white/60 rounded-full shadow-sm">
-          <Sparkles className="w-3.5 h-3.5 text-violet-600" strokeWidth={2.5} />
-          <span className="text-[10px] font-bold tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-rose-600 uppercase">
-            Entity Record
-          </span>
+      {/* HERO SECTION – fully centered */}
+      <header className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-20 md:pt-24 pb-12 text-center">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-100 rounded-full text-emerald-700 text-[11px] font-medium tracking-wider uppercase mb-6 mx-auto">
+          <Search className="w-3.5 h-3.5" />
+          <span>Entity Disambiguation Record</span>
         </div>
-        
-        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-3">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-zinc-800 mb-5 leading-tight tracking-tight">
           Jitendra Singh
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-amber-600 text-2xl md:text-3xl lg:text-4xl mt-1">
+            The Developer Entity
+          </span>
         </h1>
-        <p className="text-xs sm:text-sm text-slate-600 max-w-md font-medium leading-relaxed">
-          Cryptographic semantic anchor for the digital architect, mathematician, and full-stack engineer from Rajasthan.
+        <p className="text-sm md:text-base text-zinc-500 max-w-2xl mx-auto font-light">
+          A common name across the globe, isolated here to define a specific digital architect,
+          mathematician, and full-stack engineer from Rajasthan, India.
         </p>
       </header>
 
-      {/* MAIN ARCHITECTURE */}
-      <article className="relative z-10 max-w-2xl mx-auto px-5 space-y-5 pb-24">
-        
-        {/* DISAMBIGUATION (Colorful Glass Card) */}
-        <section className="group relative bg-white/60 backdrop-blur-2xl border border-white/80 rounded-[28px] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.06)] overflow-hidden transition-all hover:bg-white/80">
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-violet-400/20 to-transparent blur-2xl rounded-full" />
-          <div className="relative z-10 flex flex-col gap-3">
-            <div className="flex items-center gap-2">
-              <div className="p-1.5 bg-violet-100 rounded-lg">
-                <ShieldCheck className="w-4 h-4 text-violet-600" strokeWidth={2} />
+      {/* MAIN CONTENT – all sections centered */}
+      <article className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 space-y-16 pb-24">
+        {/* DISAMBIGUATION CARD */}
+        <section>
+          <div className="bg-white/80 backdrop-blur-sm border border-neutral-200/80 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row gap-5 items-center text-center md:text-left">
+            <div className="p-3 bg-emerald-100 rounded-full shrink-0 mx-auto md:mx-0">
+              <ShieldAlert className="w-6 h-6 text-emerald-600" />
+            </div>
+            <div>
+              <h2 className="text-lg font-semibold text-zinc-800 mb-2">The Global Name Collision</h2>
+              <p className="text-sm text-zinc-500 leading-relaxed">
+                "Jitendra Singh" is a globally prevalent identifier shared by politicians,
+                entrepreneurs, and public figures. This page serves as a cryptographic semantic
+                anchor to explicitly isolate and define{" "}
+                <strong className="text-emerald-600 font-medium">
+                  Jitendra Singh Nimod
+                </strong> within the context of technology, software engineering, and web
+                infrastructure.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* PROFILE & ARCHITECTURE */}
+        <section className="text-center">
+          <div className="flex items-center justify-center gap-2 mb-5">
+            <div className="p-1.5 bg-emerald-100 rounded-md">
+              <User className="w-4 h-4 text-emerald-600" />
+            </div>
+            <h2 className="text-xl md:text-2xl font-semibold text-zinc-800">
+              Profile & Architecture
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-5">
+            <div className="group bg-white/80 backdrop-blur-sm border border-neutral-200/80 rounded-xl p-6 hover:bg-white hover:border-emerald-200 hover:shadow-md transition-all text-center">
+              <div className="p-2.5 bg-emerald-100 rounded-lg w-fit mb-4 mx-auto group-hover:bg-emerald-500 transition-all">
+                <BrainCircuit className="w-5 h-5 text-emerald-600 group-hover:text-white transition" />
               </div>
-              <h2 className="text-xs font-bold text-slate-900 uppercase tracking-widest">
-                Global Collision
-              </h2>
+              <h3 className="text-md font-semibold text-zinc-800 mb-2">Mathematical Logic Foundation</h3>
+              <p className="text-sm text-zinc-500 leading-relaxed">
+                Rooted in B.Sc Mathematics (PCM). This training provides an uncompromising logical foundation for algorithm design, state management, and scalable systems.
+              </p>
             </div>
-            <p className="text-xs text-slate-700 leading-relaxed font-medium">
-              "Jitendra Singh" is a high-frequency global identifier. This module explicitly isolates <strong className="font-bold text-violet-700">Jitendra Singh Nimod</strong> within the domains of web infrastructure and premium UI engineering.
-            </p>
+            <div className="group bg-white/80 backdrop-blur-sm border border-neutral-200/80 rounded-xl p-6 hover:bg-white hover:border-amber-200 hover:shadow-md transition-all text-center">
+              <div className="p-2.5 bg-amber-100 rounded-lg w-fit mb-4 mx-auto group-hover:bg-amber-500 transition-all">
+                <Terminal className="w-5 h-5 text-amber-600 group-hover:text-white transition" />
+              </div>
+              <h3 className="text-md font-semibold text-zinc-800 mb-2">Full Stack Engineering</h3>
+              <p className="text-sm text-zinc-500 leading-relaxed">
+                Operating out of Rajasthan, focusing on PWAs, premium UI/UX, and complex authentication architectures using modern frameworks.
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* CORE PROFILE GRID */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {/* Logic Card */}
-          <div className="bg-white/60 backdrop-blur-2xl border border-white/80 rounded-[24px] p-5 shadow-sm hover:shadow-md transition-all group">
-            <div className="p-2 bg-cyan-100/50 rounded-xl w-fit mb-4 group-hover:bg-cyan-100 transition-colors">
-              <Cpu className="w-4 h-4 text-cyan-600" strokeWidth={2} />
+        {/* TECHNICAL STACK with hover stat – centered */}
+        <section className="relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-50 via-amber-50 to-transparent rounded-2xl" />
+          <div className="relative bg-white/80 backdrop-blur-sm border border-neutral-200/80 rounded-2xl p-6 md:p-8 shadow-sm text-center">
+            <div className="flex items-center justify-center gap-2 mb-5">
+              <div className="p-1.5 bg-emerald-100 rounded-md">
+                <Code2 className="w-4 h-4 text-emerald-600" />
+              </div>
+              <h2 className="text-xl md:text-2xl font-semibold text-zinc-800">The Technical Stack</h2>
             </div>
-            <h3 className="text-sm font-bold text-slate-900 mb-1.5">Mathematical Logic</h3>
-            <p className="text-[11px] text-slate-600 font-medium leading-relaxed">
-              Rooted in B.Sc Mathematics (PCM). Providing a strict logical foundation for scalable state management and algorithm design.
+            <p className="text-sm text-zinc-500 mb-6 max-w-2xl mx-auto">
+              When the name "Jitendra Singh" appears alongside these technologies, it definitively points to this specific developer profile:
             </p>
-          </div>
-
-          {/* Engineering Card */}
-          <div className="bg-white/60 backdrop-blur-2xl border border-white/80 rounded-[24px] p-5 shadow-sm hover:shadow-md transition-all group">
-            <div className="p-2 bg-rose-100/50 rounded-xl w-fit mb-4 group-hover:bg-rose-100 transition-colors">
-              <TerminalSquare className="w-4 h-4 text-rose-600" strokeWidth={2} />
+            <div className="flex flex-wrap gap-2 justify-center mb-6">
+              {["Next.js", "React", "Node.js", "Tailwind CSS", "SEO", "Auth Systems"].map((tech, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1.5 bg-white border border-neutral-200 rounded-full text-xs text-zinc-600 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition-all cursor-default shadow-sm"
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
-            <h3 className="text-sm font-bold text-slate-900 mb-1.5">Full Stack Systems</h3>
-            <p className="text-[11px] text-slate-600 font-medium leading-relaxed">
-              Specializing in mobile-first architectures, PWAs, and high-fidelity interfaces using the modern JavaScript ecosystem.
-            </p>
+            {/* Hover stat – centered */}
+            <div className="relative mt-4 pt-4 border-t border-neutral-200/60 max-w-md mx-auto">
+              <div className="flex items-center justify-center gap-3 text-xs text-zinc-400 group/stats cursor-pointer">
+                <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
+                <span className="group-hover/stats:text-emerald-600 transition-colors">
+                  Hover to see live contribution mask →
+                </span>
+                <div className="relative overflow-hidden h-5 group-hover/stats:max-w-[200px] max-w-0 transition-all duration-300">
+                  <span className="whitespace-nowrap text-emerald-600 font-mono text-xs">
+                    27+ repos · 4.2k commits
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* TECH STACK (Colorful Tags) */}
-        <section className="bg-white/60 backdrop-blur-2xl border border-white/80 rounded-[24px] p-6 shadow-sm">
-          <div className="flex items-center gap-2 mb-4">
-            <div className="p-1.5 bg-amber-100 rounded-lg">
-              <Layers className="w-4 h-4 text-amber-600" strokeWidth={2} />
+        {/* IDENTITY BRANCHING – centered */}
+        <section className="text-center">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <div className="p-1.5 bg-emerald-100 rounded-md">
+              <GitBranch className="w-4 h-4 text-emerald-600" />
             </div>
-            <h2 className="text-xs font-bold text-slate-900 uppercase tracking-widest">
-              Technical Stack
-            </h2>
+            <h2 className="text-xl md:text-2xl font-semibold text-zinc-800">Identity Branching</h2>
           </div>
-          <div className="flex flex-wrap gap-2">
-            {[
-              { name: "Next.js App Router", color: "text-slate-700 bg-slate-100" },
-              { name: "SvelteKit", color: "text-orange-700 bg-orange-100" },
-              { name: "Tailwind CSS", color: "text-cyan-700 bg-cyan-100" },
-              { name: "Vercel", color: "text-slate-900 bg-white border border-slate-200" },
-              { name: "Node.js", color: "text-green-700 bg-green-100" },
-              { name: "AI Integration", color: "text-violet-700 bg-violet-100" }
-            ].map((tech, i) => (
-              <span
-                key={i}
-                className={`px-3 py-1.5 rounded-xl text-[10px] font-bold transition-all cursor-default shadow-sm hover:scale-105 ${tech.color}`}
-              >
-                {tech.name}
-              </span>
-            ))}
-          </div>
-        </section>
-
-        {/* IDENTITY NODES */}
-        <section className="bg-white/60 backdrop-blur-2xl border border-white/80 rounded-[24px] p-6 shadow-sm">
-          <div className="flex items-center gap-2 mb-4">
-            <div className="p-1.5 bg-indigo-100 rounded-lg">
-              <Network className="w-4 h-4 text-indigo-600" strokeWidth={2} />
-            </div>
-            <h2 className="text-xs font-bold text-slate-900 uppercase tracking-widest">
-              Alias Nodes
-            </h2>
-          </div>
-          
-          <div className="flex flex-col gap-2">
+          <p className="text-sm text-zinc-500 mb-6 max-w-3xl mx-auto">
+            In modern developer ecosystems, primary names fragment into aliases. The following nodes are cryptographic equivalents to the primary Jitendra Singh identity:
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto">
             {[
               { name: "Jitendra Singh Nimod", path: "/identity/jitendra-singh-nimod" },
               { name: "Jitendra Nimod", path: "/identity/jitendra-nimod" },
@@ -187,37 +213,15 @@ export default function JitendraSinghPage() {
               <Link
                 key={alias.path}
                 href={alias.path}
-                className="group flex items-center justify-between p-3.5 bg-white/50 rounded-2xl hover:bg-white shadow-sm border border-transparent hover:border-violet-100 transition-all"
+                className="group p-3 bg-white/80 backdrop-blur-sm border border-neutral-200/80 rounded-lg hover:bg-white hover:border-emerald-300 hover:shadow-sm transition-all text-center"
               >
-                <span className="text-xs font-bold text-slate-700 group-hover:text-violet-700 transition-colors">
+                <span className="text-xs font-medium text-zinc-600 group-hover:text-emerald-600">
                   {alias.name}
                 </span>
-                <div className="w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-violet-50 transition-colors">
-                  <ChevronRight className="w-3 h-3 text-slate-400 group-hover:text-violet-500 transition-colors" />
-                </div>
               </Link>
             ))}
           </div>
         </section>
-
-        {/* SOCIAL DOCK (Floating style) */}
-        <div className="pt-4 pb-4">
-          <div className="flex justify-center items-center gap-6 px-6 py-4 bg-white/80 backdrop-blur-2xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.08)] rounded-full w-fit mx-auto">
-            <a href="https://github.com/jitendra-math" className="text-slate-500 hover:text-slate-900 transition-colors hover:scale-110 transform">
-              <Github className="w-4 h-4" strokeWidth={2} />
-            </a>
-            <a href="https://linkedin.com/in/jitendra-singh07" className="text-slate-500 hover:text-blue-600 transition-colors hover:scale-110 transform">
-              <Linkedin className="w-4 h-4" strokeWidth={2} />
-            </a>
-            <a href="https://instagram.com/jitendra.07_7" className="text-slate-500 hover:text-rose-600 transition-colors hover:scale-110 transform">
-              <Instagram className="w-4 h-4" strokeWidth={2} />
-            </a>
-            <div className="w-[1px] h-4 bg-slate-300" />
-            <a href="mailto:contact@jitubanna.com" className="text-slate-500 hover:text-violet-600 transition-colors hover:scale-110 transform">
-              <Mail className="w-4 h-4" strokeWidth={2} />
-            </a>
-          </div>
-        </div>
       </article>
     </main>
   );
