@@ -1,5 +1,5 @@
 // src/app/jitendra-singh/page.js
-// Premium indigo/fuchsia theme + extra sections (availability banner, footer)
+// Premium indigo/fuchsia theme – no styled-jsx, fully server component
 
 import Link from "next/link";
 import {
@@ -89,7 +89,7 @@ export default function JitendraSinghPage() {
 
       {/* HERO SECTION – with availability banner */}
       <header className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-20 md:pt-24 pb-12 text-center">
-        {/* New: Availability Banner */}
+        {/* Availability Banner */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-indigo-50 rounded-full border border-indigo-200 shadow-sm mb-8 mx-auto">
           <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600" />
           <span className="text-xs font-medium text-indigo-700 tracking-wide">Currently Available for Opportunities</span>
@@ -99,10 +99,10 @@ export default function JitendraSinghPage() {
           <Search className="w-3.5 h-3.5" />
           <span>The Developer Entity</span>
         </div>
-        
+
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-5 leading-tight tracking-tight">
           Jitendra Singh
-          <span className="block bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 bg-clip-text text-transparent animate-gradient text-2xl md:text-3xl lg:text-4xl mt-1">
+          <span className="block bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 bg-clip-text text-transparent text-2xl md:text-3xl lg:text-4xl mt-1">
             The Developer Entity
           </span>
         </h1>
@@ -131,7 +131,7 @@ export default function JitendraSinghPage() {
           </p>
         </section>
 
-        {/* PROFILE & ARCHITECTURE – cards with new colors */}
+        {/* PROFILE & ARCHITECTURE – cards */}
         <section className="text-center">
           <div className="flex items-center justify-center gap-2 mb-5">
             <div className="p-1.5 bg-indigo-100 rounded-md">
@@ -163,7 +163,7 @@ export default function JitendraSinghPage() {
           </div>
         </section>
 
-        {/* TECHNICAL STACK – plain section, tags have new hover */}
+        {/* TECHNICAL STACK – plain section */}
         <section className="text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Code2 className="w-5 h-5 text-indigo-600" />
@@ -198,7 +198,7 @@ export default function JitendraSinghPage() {
           </div>
         </section>
 
-        {/* IDENTITY BRANCHING – plain links with new arrow on hover */}
+        {/* IDENTITY BRANCHING – plain links with arrow */}
         <section className="text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <GitBranch className="w-5 h-5 text-indigo-600" />
@@ -227,7 +227,7 @@ export default function JitendraSinghPage() {
         </section>
       </article>
 
-      {/* New Footer – with last updated and verification badge */}
+      {/* Footer */}
       <footer className="relative z-10 border-t border-slate-200/60 mt-8 py-8 text-center text-xs text-slate-400">
         <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-3">
           <span>© {new Date().getFullYear()} Jitendra Singh Nimod</span>
@@ -238,19 +238,6 @@ export default function JitendraSinghPage() {
           <span>Last updated: {lastUpdated}</span>
         </div>
       </footer>
-
-      {/* Add keyframes for gradient animation (inline style) */}
-      <style jsx>{`
-        @keyframes gradient {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        .animate-gradient {
-          background-size: 200% auto;
-          animation: gradient 3s ease infinite;
-        }
-      `}</style>
     </main>
   );
 }
