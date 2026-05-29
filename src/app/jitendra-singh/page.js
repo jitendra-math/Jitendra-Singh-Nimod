@@ -83,14 +83,9 @@ export default function JitendraSinghPage() {
       <header className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-20 md:pt-24 pb-12 text-center">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-100 rounded-full text-emerald-700 text-[11px] font-medium tracking-wider uppercase mb-6 mx-auto">
           <Search className="w-3.5 h-3.5" />
-          <span>Entity Disambiguation Record</span>
+          <span>The Developer Entity</span>
         </div>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-zinc-800 mb-5 leading-tight tracking-tight">
-          Jitendra Singh
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-amber-600 text-2xl md:text-3xl lg:text-4xl mt-1">
-            The Developer Entity
-          </span>
-        </h1>
+        
         <p className="text-sm md:text-base text-zinc-500 max-w-2xl mx-auto font-light">
           A common name across the globe, isolated here to define a specific digital architect,
           mathematician, and full-stack engineer from Rajasthan, India.
