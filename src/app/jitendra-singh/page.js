@@ -1,4 +1,5 @@
-"use client";
+// src/app/jitendra-singh/page.js
+// Ultra-premium light theme – server component, no "use client", inline mask styles
 
 import Link from "next/link";
 import {
@@ -63,18 +64,30 @@ export default function JitendraSinghPage() {
 
   return (
     <main className="relative min-h-screen bg-[#faf9fe] overflow-x-hidden">
-      {/* JSON‑LD for Google */}
+      {/* JSON-LD for Google */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* --- Masked background blobs (CSS mask effect) --- */}
-      <div className="fixed top-[-10%] left-[-10%] w-[600px] h-[600px] bg-[#2563EB]/10 blur-[130px] rounded-full pointer-events-none mask-gradient" />
-      <div className="fixed bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-purple-500/10 blur-[150px] rounded-full pointer-events-none mask-gradient-reverse" />
+      {/* Masked background blobs – inline style for mask (no client component needed) */}
+      <div
+        className="fixed top-[-10%] left-[-10%] w-[600px] h-[600px] bg-[#2563EB]/10 blur-[130px] rounded-full pointer-events-none"
+        style={{
+          maskImage: "radial-gradient(circle at 30% 40%, black 30%, transparent 80%)",
+          WebkitMaskImage: "radial-gradient(circle at 30% 40%, black 30%, transparent 80%)",
+        }}
+      />
+      <div
+        className="fixed bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-purple-500/10 blur-[150px] rounded-full pointer-events-none"
+        style={{
+          maskImage: "radial-gradient(circle at 70% 60%, black 30%, transparent 80%)",
+          WebkitMaskImage: "radial-gradient(circle at 70% 60%, black 30%, transparent 80%)",
+        }}
+      />
       <div className="fixed inset-0 bg-[radial-gradient(#2563EB_0.8px,transparent_0.8px)] [background-size:28px_28px] opacity-[0.02] pointer-events-none" />
 
-      {/* --- HERO (reduced font size) --- */}
+      {/* ===== HERO SECTION ===== */}
       <header className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-20 md:pt-24 pb-12 text-center">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#2563EB]/10 rounded-full text-[#2563EB] text-[11px] font-medium tracking-wider uppercase mb-6">
           <Search className="w-3.5 h-3.5" />
@@ -92,7 +105,7 @@ export default function JitendraSinghPage() {
         </p>
       </header>
 
-      {/* --- MAIN (smaller text, softer cards) --- */}
+      {/* ===== MAIN CONTENT ===== */}
       <article className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 space-y-16 pb-20">
         {/* DISAMBIGUATION CARD */}
         <section>
@@ -115,7 +128,7 @@ export default function JitendraSinghPage() {
           </div>
         </section>
 
-        {/* PROFILE + ARCHITECTURE (cards with masked hover effect) */}
+        {/* PROFILE & ARCHITECTURE */}
         <section>
           <div className="flex items-center gap-2 mb-5">
             <div className="p-1.5 bg-[#2563EB]/10 rounded-md">
@@ -126,45 +139,28 @@ export default function JitendraSinghPage() {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-5">
-            {[
-              {
-                icon: BrainCircuit,
-                title: "Mathematical Logic Foundation",
-                desc: "Rooted in B.Sc Mathematics (PCM). This training provides an uncompromising logical foundation for algorithm design, state management, and scalable systems.",
-                color: "blue",
-              },
-              {
-                icon: Terminal,
-                title: "Full Stack Engineering",
-                desc: "Operating out of Rajasthan, focusing on PWAs, premium UI/UX, and complex authentication architectures using modern frameworks.",
-                color: "purple",
-              },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="group bg-white/70 backdrop-blur-sm border border-zinc-200/80 rounded-xl p-6 hover:bg-white hover:border-[#2563EB]/30 hover:shadow-md transition-all"
-              >
-                <div
-                  className={`p-2.5 rounded-lg w-fit mb-4 transition-all ${
-                    item.color === "blue"
-                      ? "bg-[#2563EB]/10 group-hover:bg-[#2563EB]"
-                      : "bg-purple-100 group-hover:bg-purple-500"
-                  }`}
-                >
-                  <item.icon
-                    className={`w-5 h-5 ${
-                      item.color === "blue" ? "text-[#2563EB] group-hover:text-white" : "text-purple-600 group-hover:text-white"
-                    } transition`}
-                  />
-                </div>
-                <h3 className="text-md font-semibold text-zinc-800 mb-2">{item.title}</h3>
-                <p className="text-sm text-zinc-500 leading-relaxed">{item.desc}</p>
+            <div className="group bg-white/70 backdrop-blur-sm border border-zinc-200/80 rounded-xl p-6 hover:bg-white hover:border-[#2563EB]/30 hover:shadow-md transition-all">
+              <div className="p-2.5 bg-[#2563EB]/10 rounded-lg w-fit mb-4 group-hover:bg-[#2563EB] transition-all">
+                <BrainCircuit className="w-5 h-5 text-[#2563EB] group-hover:text-white transition" />
               </div>
-            ))}
+              <h3 className="text-md font-semibold text-zinc-800 mb-2">Mathematical Logic Foundation</h3>
+              <p className="text-sm text-zinc-500 leading-relaxed">
+                Rooted in B.Sc Mathematics (PCM). This training provides an uncompromising logical foundation for algorithm design, state management, and scalable systems.
+              </p>
+            </div>
+            <div className="group bg-white/70 backdrop-blur-sm border border-zinc-200/80 rounded-xl p-6 hover:bg-white hover:border-[#2563EB]/30 hover:shadow-md transition-all">
+              <div className="p-2.5 bg-purple-100 rounded-lg w-fit mb-4 group-hover:bg-purple-500 transition-all">
+                <Terminal className="w-5 h-5 text-purple-600 group-hover:text-white transition" />
+              </div>
+              <h3 className="text-md font-semibold text-zinc-800 mb-2">Full Stack Engineering</h3>
+              <p className="text-sm text-zinc-500 leading-relaxed">
+                Operating out of Rajasthan, focusing on PWAs, premium UI/UX, and complex authentication architectures using modern frameworks.
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* TECH STACK – with interactive masked counter (new feature) */}
+        {/* TECHNICAL STACK with hover stat */}
         <section className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-[#2563EB]/5 via-purple-500/5 to-transparent rounded-2xl" />
           <div className="relative bg-white/70 backdrop-blur-sm border border-zinc-200/80 rounded-2xl p-6 md:p-8 shadow-sm">
@@ -175,18 +171,10 @@ export default function JitendraSinghPage() {
               <h2 className="text-xl md:text-2xl font-semibold text-zinc-800">The Technical Stack</h2>
             </div>
             <p className="text-sm text-zinc-500 mb-6 max-w-2xl">
-              When the name "Jitendra Singh" appears alongside these technologies, it definitively
-              points to this specific developer profile:
+              When the name "Jitendra Singh" appears alongside these technologies, it definitively points to this specific developer profile:
             </p>
             <div className="flex flex-wrap gap-2 mb-6">
-              {[
-                "Next.js",
-                "React",
-                "Node.js",
-                "Tailwind CSS",
-                "SEO",
-                "Auth Systems",
-              ].map((tech, i) => (
+              {["Next.js", "React", "Node.js", "Tailwind CSS", "SEO", "Auth Systems"].map((tech, i) => (
                 <span
                   key={i}
                   className="px-3 py-1.5 bg-white border border-zinc-200 rounded-full text-xs text-zinc-600 hover:bg-[#2563EB] hover:text-white hover:border-[#2563EB] transition-all cursor-default shadow-sm"
@@ -195,8 +183,7 @@ export default function JitendraSinghPage() {
                 </span>
               ))}
             </div>
-
-            {/* NEW: Masked micro‑interaction – floating stat reveal */}
+            {/* Hover stat – pure CSS, no JS */}
             <div className="relative mt-4 pt-4 border-t border-zinc-200/60">
               <div className="flex items-center gap-3 text-xs text-zinc-400 group/stats cursor-pointer">
                 <Sparkles className="w-3.5 h-3.5 text-[#2563EB]" />
@@ -213,7 +200,7 @@ export default function JitendraSinghPage() {
           </div>
         </section>
 
-        {/* IDENTITY BRANCHING – reduced font */}
+        {/* IDENTITY BRANCHING */}
         <section>
           <div className="flex items-center gap-2 mb-4">
             <div className="p-1.5 bg-[#2563EB]/10 rounded-md">
@@ -222,8 +209,7 @@ export default function JitendraSinghPage() {
             <h2 className="text-xl md:text-2xl font-semibold text-zinc-800">Identity Branching</h2>
           </div>
           <p className="text-sm text-zinc-500 mb-6 max-w-3xl">
-            In modern developer ecosystems, primary names fragment into aliases. The following
-            nodes are cryptographic equivalents to the primary Jitendra Singh identity:
+            In modern developer ecosystems, primary names fragment into aliases. The following nodes are cryptographic equivalents to the primary Jitendra Singh identity:
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
@@ -254,8 +240,7 @@ export default function JitendraSinghPage() {
             <h2 className="text-xl md:text-2xl font-semibold text-zinc-800">Global Developer Footprint</h2>
           </div>
           <p className="text-sm text-zinc-500 mb-6">
-            Verifiable accounts and repositories that validate the technical contributions of this
-            entity across the internet.
+            Verifiable accounts and repositories that validate the technical contributions of this entity across the internet.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {[
@@ -282,7 +267,7 @@ export default function JitendraSinghPage() {
           </div>
         </section>
 
-        {/* BOTTOM CTA – cleaner, smaller */}
+        {/* BOTTOM CTA */}
         <section className="bg-gradient-to-br from-[#2563EB] to-purple-600 rounded-2xl p-6 md:p-8 text-white text-center shadow-md">
           <h2 className="text-xl md:text-2xl font-semibold mb-3">Verify the Identity</h2>
           <p className="text-white/80 text-sm max-w-md mx-auto mb-6">
@@ -310,7 +295,7 @@ export default function JitendraSinghPage() {
           </div>
         </section>
 
-        {/* SOCIAL LINKS (compact) */}
+        {/* SOCIAL LINKS */}
         <div className="flex flex-wrap justify-center gap-5 pt-6 pb-4">
           <a href="https://github.com/jitendra-math" className="text-zinc-400 hover:text-[#2563EB] transition">
             <Github className="w-5 h-5" />
@@ -326,18 +311,6 @@ export default function JitendraSinghPage() {
           </a>
         </div>
       </article>
-
-      {/* Inline style for CSS mask (works on modern browsers) */}
-      <style jsx>{`
-        .mask-gradient {
-          mask-image: radial-gradient(circle at 30% 40%, black 30%, transparent 80%);
-          -webkit-mask-image: radial-gradient(circle at 30% 40%, black 30%, transparent 80%);
-        }
-        .mask-gradient-reverse {
-          mask-image: radial-gradient(circle at 70% 60%, black 30%, transparent 80%);
-          -webkit-mask-image: radial-gradient(circle at 70% 60%, black 30%, transparent 80%);
-        }
-      `}</style>
     </main>
   );
 }
