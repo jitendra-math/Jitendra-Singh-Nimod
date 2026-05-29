@@ -1,5 +1,5 @@
 // src/app/jitendra-singh/page.js
-// Premium Teal & Gold – with info table, no commit stat
+// Premium Teal & Gold – with enhanced glass table (two-color rows, centered)
 
 import Link from "next/link";
 import {
@@ -53,6 +53,16 @@ export default function JitendraSinghPage() {
     },
   };
 
+  const tableData = [
+    { label: "Name", value: "Jitendra Singh Nimod" },
+    { label: "Profession", value: "Full Stack Web Developer" },
+    { label: "Organization", value: "Founder, JSS Originals" },
+    { label: "Location", value: "Rajasthan, India" },
+    { label: "Website", value: <a href="https://jitubanna.com" target="_blank" rel="noopener noreferrer" className="text-[#035352] hover:text-[#C9A84C] transition-colors underline-offset-2 hover:underline">jitubanna.com</a> },
+    { label: "Email", value: <a href="mailto:contact@jitubanna.com" className="text-[#035352] hover:text-[#C9A84C] transition-colors">contact@jitubanna.com</a> },
+    { label: "GitHub", value: <a href="https://github.com/jitendra-math" target="_blank" rel="noopener noreferrer" className="text-[#035352] hover:text-[#C9A84C] transition-colors">@jitendra-math</a> },
+  ];
+
   return (
     <main className="relative min-h-screen bg-[#FCF9F2] overflow-x-hidden">
       {/* JSON-LD for Google */}
@@ -96,21 +106,18 @@ export default function JitendraSinghPage() {
         </p>
       </header>
 
-      {/* INFO TABLE – mobile-first, responsive */}
-      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 mt-6 mb-12">
-        <div className="bg-white/90 backdrop-blur-sm border border-[#F3E8BC] rounded-2xl overflow-hidden shadow-sm">
-          <div className="divide-y divide-[#F3E8BC]">
-            {[
-              { label: "Name", value: "Jitendra Singh Nimod" },
-              { label: "Profession", value: "Full Stack Web Developer" },
-              { label: "Organization", value: "Founder, JSS Originals" },
-              { label: "Location", value: "Rajasthan, India" },
-              { label: "Website", value: <a href="https://jitubanna.com" target="_blank" rel="noopener noreferrer" className="text-[#035352] hover:text-[#C9A84C] transition-colors underline-offset-2 hover:underline">jitubanna.com</a> },
-              { label: "Email", value: <a href="mailto:contact@jitubanna.com" className="text-[#035352] hover:text-[#C9A84C] transition-colors">contact@jitubanna.com</a> },
-              { label: "GitHub", value: <a href="https://github.com/jitendra-math" target="_blank" rel="noopener noreferrer" className="text-[#035352] hover:text-[#C9A84C] transition-colors">@jitendra-math</a> },
-            ].map((item, idx) => (
-              <div key={idx} className="flex flex-col sm:flex-row sm:items-center px-6 py-4">
-                <div className="w-full sm:w-1/3 text-sm font-semibold text-[#035352] mb-1 sm:mb-0">
+      {/* PREMIUM GLASS TABLE – centered, two-colour rows, glass effect */}
+      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 mt-8 mb-12">
+        <div className="bg-white/40 backdrop-blur-md border border-[#F3E8BC]/60 rounded-2xl shadow-lg overflow-hidden">
+          <div className="divide-y divide-[#F3E8BC]/40">
+            {tableData.map((item, idx) => (
+              <div
+                key={idx}
+                className={`flex flex-col sm:flex-row items-center justify-center text-center sm:text-left px-6 py-4 transition-all ${
+                  idx % 2 === 0 ? "bg-[#F3E8BC]/20" : "bg-white/20"
+                }`}
+              >
+                <div className="w-full sm:w-1/3 text-sm font-semibold text-[#035352] mb-2 sm:mb-0">
                   {item.label}
                 </div>
                 <div className="w-full sm:w-2/3 text-sm text-[#1E1E1E] break-words">
@@ -172,7 +179,7 @@ export default function JitendraSinghPage() {
           </div>
         </section>
 
-        {/* TECHNICAL STACK – plain section (no hover stat) */}
+        {/* TECHNICAL STACK – plain section */}
         <section className="text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Code2 className="w-5 h-5 text-[#C9A84C]" />
