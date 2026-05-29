@@ -1,5 +1,5 @@
 // src/app/jitendra-singh/page.js
-// Final polished – centered, no social links, emerald/amber theme
+// Final as requested – plain sections for Disambiguation, Tech Stack, Identity Branching
 
 import Link from "next/link";
 import {
@@ -97,30 +97,25 @@ export default function JitendraSinghPage() {
         </p>
       </header>
 
-      {/* MAIN CONTENT – all sections centered */}
+      {/* MAIN CONTENT */}
       <article className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 space-y-16 pb-24">
-        {/* DISAMBIGUATION CARD */}
-        <section>
-          <div className="bg-white/80 backdrop-blur-sm border border-neutral-200/80 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row gap-5 items-center text-center md:text-left">
-            <div className="p-3 bg-emerald-100 rounded-full shrink-0 mx-auto md:mx-0">
-              <ShieldAlert className="w-6 h-6 text-emerald-600" />
-            </div>
-            <div>
-              <h2 className="text-lg font-semibold text-zinc-800 mb-2">The Global Name Collision</h2>
-              <p className="text-sm text-zinc-500 leading-relaxed">
-                "Jitendra Singh" is a globally prevalent identifier shared by politicians,
-                entrepreneurs, and public figures. This page serves as a cryptographic semantic
-                anchor to explicitly isolate and define{" "}
-                <strong className="text-emerald-600 font-medium">
-                  Jitendra Singh Nimod
-                </strong> within the context of technology, software engineering, and web
-                infrastructure.
-              </p>
-            </div>
+        
+        {/* DISAMBIGUATION – plain section (no card) */}
+        <section className="text-center">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <ShieldAlert className="w-5 h-5 text-emerald-600" />
+            <h2 className="text-xl md:text-2xl font-semibold text-zinc-800">The Global Name Collision</h2>
           </div>
+          <p className="text-sm text-zinc-500 leading-relaxed max-w-3xl mx-auto">
+            "Jitendra Singh" is a globally prevalent identifier shared by politicians,
+            entrepreneurs, and public figures. This page serves as a cryptographic semantic
+            anchor to explicitly isolate and define{" "}
+            <strong className="text-emerald-600 font-medium">Jitendra Singh Nimod</strong>{" "}
+            within the context of technology, software engineering, and web infrastructure.
+          </p>
         </section>
 
-        {/* PROFILE & ARCHITECTURE */}
+        {/* PROFILE & ARCHITECTURE (cards remain) */}
         <section className="text-center">
           <div className="flex items-center justify-center gap-2 mb-5">
             <div className="p-1.5 bg-emerald-100 rounded-md">
@@ -152,58 +147,51 @@ export default function JitendraSinghPage() {
           </div>
         </section>
 
-        {/* TECHNICAL STACK with hover stat – centered */}
-        <section className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-50 via-amber-50 to-transparent rounded-2xl" />
-          <div className="relative bg-white/80 backdrop-blur-sm border border-neutral-200/80 rounded-2xl p-6 md:p-8 shadow-sm text-center">
-            <div className="flex items-center justify-center gap-2 mb-5">
-              <div className="p-1.5 bg-emerald-100 rounded-md">
-                <Code2 className="w-4 h-4 text-emerald-600" />
-              </div>
-              <h2 className="text-xl md:text-2xl font-semibold text-zinc-800">The Technical Stack</h2>
-            </div>
-            <p className="text-sm text-zinc-500 mb-6 max-w-2xl mx-auto">
-              When the name "Jitendra Singh" appears alongside these technologies, it definitively points to this specific developer profile:
-            </p>
-            <div className="flex flex-wrap gap-2 justify-center mb-6">
-              {["Next.js", "React", "Node.js", "Tailwind CSS", "SEO", "Auth Systems"].map((tech, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1.5 bg-white border border-neutral-200 rounded-full text-xs text-zinc-600 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition-all cursor-default shadow-sm"
-                >
-                  {tech}
+        {/* TECHNICAL STACK – plain section (no card) */}
+        <section className="text-center">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Code2 className="w-5 h-5 text-emerald-600" />
+            <h2 className="text-xl md:text-2xl font-semibold text-zinc-800">The Technical Stack</h2>
+          </div>
+          <p className="text-sm text-zinc-500 mb-6 max-w-2xl mx-auto">
+            When the name "Jitendra Singh" appears alongside these technologies, it definitively points to this specific developer profile:
+          </p>
+          <div className="flex flex-wrap gap-2 justify-center mb-6">
+            {["Next.js", "React", "Node.js", "Tailwind CSS", "SEO", "Auth Systems"].map((tech, i) => (
+              <span
+                key={i}
+                className="px-3 py-1.5 bg-white border border-neutral-200 rounded-full text-xs text-zinc-600 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition-all cursor-default shadow-sm"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+          {/* Hover stat – subtle */}
+          <div className="relative pt-4 border-t border-neutral-200/60 max-w-md mx-auto">
+            <div className="flex items-center justify-center gap-3 text-xs text-zinc-400 group/stats cursor-pointer">
+              <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
+              <span className="group-hover/stats:text-emerald-600 transition-colors">
+                Hover to see live contribution mask →
+              </span>
+              <div className="relative overflow-hidden h-5 group-hover/stats:max-w-[200px] max-w-0 transition-all duration-300">
+                <span className="whitespace-nowrap text-emerald-600 font-mono text-xs">
+                  27+ repos · 4.2k commits
                 </span>
-              ))}
-            </div>
-            {/* Hover stat – centered */}
-            <div className="relative mt-4 pt-4 border-t border-neutral-200/60 max-w-md mx-auto">
-              <div className="flex items-center justify-center gap-3 text-xs text-zinc-400 group/stats cursor-pointer">
-                <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
-                <span className="group-hover/stats:text-emerald-600 transition-colors">
-                  Hover to see live contribution mask →
-                </span>
-                <div className="relative overflow-hidden h-5 group-hover/stats:max-w-[200px] max-w-0 transition-all duration-300">
-                  <span className="whitespace-nowrap text-emerald-600 font-mono text-xs">
-                    27+ repos · 4.2k commits
-                  </span>
-                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* IDENTITY BRANCHING – centered */}
+        {/* IDENTITY BRANCHING – plain links, no cards */}
         <section className="text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="p-1.5 bg-emerald-100 rounded-md">
-              <GitBranch className="w-4 h-4 text-emerald-600" />
-            </div>
+            <GitBranch className="w-5 h-5 text-emerald-600" />
             <h2 className="text-xl md:text-2xl font-semibold text-zinc-800">Identity Branching</h2>
           </div>
           <p className="text-sm text-zinc-500 mb-6 max-w-3xl mx-auto">
             In modern developer ecosystems, primary names fragment into aliases. The following nodes are cryptographic equivalents to the primary Jitendra Singh identity:
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3">
             {[
               { name: "Jitendra Singh Nimod", path: "/identity/jitendra-singh-nimod" },
               { name: "Jitendra Nimod", path: "/identity/jitendra-nimod" },
@@ -213,11 +201,9 @@ export default function JitendraSinghPage() {
               <Link
                 key={alias.path}
                 href={alias.path}
-                className="group p-3 bg-white/80 backdrop-blur-sm border border-neutral-200/80 rounded-lg hover:bg-white hover:border-emerald-300 hover:shadow-sm transition-all text-center"
+                className="text-sm text-zinc-500 hover:text-emerald-600 transition-colors underline-offset-2 hover:underline"
               >
-                <span className="text-xs font-medium text-zinc-600 group-hover:text-emerald-600">
-                  {alias.name}
-                </span>
+                {alias.name}
               </Link>
             ))}
           </div>
